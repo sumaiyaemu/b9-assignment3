@@ -6,41 +6,144 @@
     <title>HOCEY'S</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'hockey-primary': '#FF4240',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .font-manrope{
+        font-family: 'Manrope', sans-serif;
+    }
+</style>
 </head>
-<body>
-    <header>
-        <div class="navbar bg-base-100 g">
+<body class="font-manrope">
+    <header class="md:container md:mx-auto">
+     <nav>
+        <div class="navbar bg-base-100 ">
             <div class="navbar-start">
               <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden gap-6">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                 <li>Home</li>
-                 <li>About</li>
-                 <li>pages</li>
-                 <li>Blog</li>
-                 <li>contact</li>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl">HOCEKY'S</a>
+              <a class="btn btn-ghost text-4xl font-extrabold">Hockey<Span class="text-red-700">'</Span>s</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-               <li>Home</li>
-               <li>About</li>
-               <li>Pages</li>
-               <li>Blog</li>
-               <li>contact</li>
+              <ul class="menu menu-horizontal text-base px-1">
+                <li class="text-red-500"><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn btn-primary">Get Ticket</a>
+              <a class="btn bg-hockey-primary text-white">Get Ticket</a>
             </div>
           </div>
+     </nav>
+    <div class="relative">
+        <div class="carousel w-full h-[550px] mt-14">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="Images/1.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="Images/2.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="Images/3.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="Images/4.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+          <div class=" lg:absolute bottom-10 right-10 w-[556px] h-[165px] bg-black rounded-xl">
+            <h3 class="text-2xl font-extrabold text-white pt-5 pb-4">Meet all the heroes from the field</h3>
+            <p class="text-base font-medium text-white">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+          </div>
+    </div>   
     </header>
-    <main>
+    <main class="container mx-auto mt-12">
+     <section>
+        <div>
+            <div class="text-center ">
+                <h1 class="text-4xl font-extrabold pb-6">Professional Hockeys Club</h1>
+                <p class="text-base font-medium">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat <br> dolor. Purus urna in sit nullam proin. </p>
+            </div>
+            <div class="flex flex-col lg:flex-row text-center lg:justify-around pt-32 ">
+                <div>
+                    <div class="radial-progress text-red-500" style="--value:87;" role="progressbar">87%</div>
+                    <h3>Prayer Facility</h3>
+                    <p>Amet consectetur. Condimentum dignissim.</p>
+                </div>
+               <div>
+                <div class="radial-progress text-green-500" style="--value:95;" role="progressbar">95%</div>
+                <h3>Prayer Facility</h3>
+                    <p>Amet consectetur. Condimentum dignissim.</p>
+               </div>
+               <div>
+                <div class="radial-progress text-yellow-500" style="--value:90;" role="progressbar">90%</div>
+                <h3>Prayer Facility</h3>
+                <p>Amet consectetur. Condimentum dignissim.</p>
+               </div>
+               <div>
+                <div class="radial-progress text-primary" style="--value:80;" role="progressbar">80%</div>
+                <h3>Prayer Facility</h3>
+                <p>Amet consectetur. Condimentum dignissim.</p>
+               </div>
+            </div>
+           </div>
+     </section>
+     <section>
+    <div class="mt-16">
+        <div class="text-center">
+            <h1 class="text-4xl font-extrabold pb-8">Program Sections</h1>
+            <p class="text-base font-medium">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+        <div>
+            <div>
+             
+            </div>
+            <div>
 
+            </div>
+        </div>
+    </div>
+     </section>
     </main>
     <footer>
 
